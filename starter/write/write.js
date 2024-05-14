@@ -7,13 +7,13 @@ window.onload = function() {
     console.error('Could not find the iframe with the ID "output"');
   }
 
-  const buttons = document.querySelectorAll('button');
+      const buttons = document.querySelectorAll('button');
 
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', () => {
-      let cmd = buttons[i].getAttribute('data-cmd');
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', () => {
+          let cmd = buttons[i].getAttribute('data-cmd');
       if (buttons[i].name === "active") {
-        buttons[i].classList.toggle('active');
+        buttons[i].classList.add('active');
       }
 
       if (cmd === "insertImage" || cmd === "createLink") {

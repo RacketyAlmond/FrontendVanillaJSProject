@@ -1,0 +1,31 @@
+/* Add your custom styles here */
+.header__title,
+.section{
+    display: none;
+}
+
+
+.toolbar {
+    margin: 3% 5% 0 5%;
+
+}
+
+.format-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+}
+
+.format-input {
+    margin: 0 5px;
+    padding: 3px;
+}
+
+.text-area {
+    border: 1px solid #ddd;
+    min-height: 500px;
+    margin: 2% 5% 5% 5%;
+    font-size: 16px;
+}
+.name-writing-type{
+    margin: 120px 5% 0 5%;
+}
