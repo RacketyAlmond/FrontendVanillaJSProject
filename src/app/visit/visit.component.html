@@ -1,0 +1,23 @@
+<div>
+  <h2>Visits</h2>
+  <ul>
+    <li *ngFor="let visit of visits">
+      {{ visit.patientName }} {{ visit.patientSurname }} - {{ visit.date }}
+      <button (click)="deleteVisit(visit)">Delete</button>
+    </li>
+  </ul>
+  <h3>Add a New Visit</h3>
+  <form (ngSubmit)="addVisit()">
+    <label for="patientName">Patient Name:</label><br>
+    <input type="text" id="patientName" required [(ngModel)]="newVisit.patientName" name="patientName"><br>
+    <label for="patientSurname">Patient Surname:</label><br>
+    <input type="text" id="patientSurname" required [(ngModel)]="newVisit.patientSurname" name="patientSurname"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" required [(ngModel)]="newVisit.email" name="email"><br>
+    <label for="date">Date:</label><br>
+    <input type="date" id="date" required [(ngModel)]="newVisit.date" name="date"><br>
+    <label for="note">Note:</label><br>
+    <textarea id="note" [(ngModel)]="newVisit.note" name="note"></textarea><br>
+    <button type="submit">Add</button>
+  </form>
+</div>

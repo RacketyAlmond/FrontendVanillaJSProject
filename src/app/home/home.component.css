@@ -1,0 +1,146 @@
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+  color: #007bff;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.btn btn-primary{
+  text-decoration: none;
+}
+
+.text-primary {
+  color: #007bff;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+
+.name{
+  font-size: 36px;
+  display: inline;
+}
+
+div{
+  display: inline;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 70px auto;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-prompt {
+  text-align: center;
+  font-size: 18px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.website-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.website-info h2 {
+  color: #343a40;
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.info-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.info-image {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.info-text {
+  flex: 1;
+}
+
+.info-text p {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.5;
+}
+
+.info-text ul {
+  list-style: none;
+  padding: 0;
+  color: #6c757d;
+}
+
+.info-text li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-text li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.info-text li::before {
+  content: '';
+}

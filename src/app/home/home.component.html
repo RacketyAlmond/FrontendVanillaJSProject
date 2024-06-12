@@ -1,0 +1,38 @@
+<div class="home-container">
+  <div class="welcome-section">
+    <h1>Welcome to Our Healthcare Portal
+    <div *ngIf="info.token != '{}'; else loggedOut" class="user-info">
+      <strong class = "name">{{info.username}}</strong>
+    </div>
+    </h1>
+      <p>Your one-stop solution for managing medical visits and prescriptions.</p>
+  </div>
+
+  <div *ngIf="info.token != '{}'; else loggedOut" class="user-info">
+    <button class="btn btn-secondary" (click)="logout()">Logout</button>
+  </div>
+
+  <ng-template #loggedOut>
+    <p class="login-prompt">Please login to access your account and manage your medical information.</p>
+  </ng-template>
+
+  <section class="website-info">
+    <h2>About Our Website</h2>
+    <div class="info-content">
+      <div class="info-text">
+        <p>
+          Our healthcare portal is designed to simplify the management of medical visits and prescriptions. Whether you are a healthcare provider or a patient, our platform offers intuitive features to keep your medical records organized and accessible.
+        </p>
+        <ul>
+          <li><i class="fa fa-calendar-check"></i> Schedule and track patient visits effortlessly.</li>
+          <li><i class="fa fa-prescription-bottle-alt"></i> Manage prescriptions with ease.</li>
+          <li><i class="fa fa-sort"></i> Sort and filter visits by date or surname for quick access.</li>
+          <li><i class="fa fa-user-graduate"></i> Maintain student information related to each visit.</li>
+        </ul>
+        <p>
+          Our user-friendly interface ensures that all your medical records are just a click away, making healthcare management smoother and more efficient.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,66 @@
+/* app.component.css */
+
+.page-header {
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  color: #fff;
+  padding: 20px 0;
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+
+.headerOne{
+  font-size: 40px;
+}
+
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-header h1 {
+  margin: 0;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinks a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+a{
+  position: center;
+  font-size: 25px;
+}
+
+.navbar-inverse {
+}
+
+.navbar-inverse .navbar-nav .nav-item .nav-link {
+}
+
+#content {
+  padding: 20px 0;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-link{
+  text-decoration: none;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  color: #fff;
+}

@@ -1,0 +1,101 @@
+<div class="welcome-message">
+  <h2>Welcome, {{this.username}}</h2>
+</div>
+<div class="sort-search-container">
+  <h3 id="visit-list" class = "YourVisits">Your Visits:</h3>
+  <button (click)="toggleSort('date')">Sort by Date</button>
+  <button (click)="toggleSort('surname')">Sort by Surname</button>
+  <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (input)="filterVisits()" />
+</div>
+
+<div class="visit-container">
+  <h3>Visits List</h3>
+  <ul class="visit-list">
+    <li *ngFor="let visit of filteredVisits" class="visit-item">
+      <div class="visit-details">
+        <span class="badge">{{visit.id}}</span>
+        <span class="patient-name">{{ visit.patientName }}</span>
+        <span class="patient-surname">{{ visit.patientSurname }}</span>
+        <span class="email">{{ visit.email }}</span>
+        <span class="date">{{ visit.date }}</span>
+        <span class="note">{{ visit.note }}</span>
+
+        <div *ngFor="let student of studentList">
+          <div *ngIf="student.email === visit.email && student.telephone === visit.date">
+            <h4>Prescription Details:</h4>
+            <span class="student-name">Name: {{ student.firstname }}</span><br>
+            <span class="student-surname">Surname: {{ student.lastname }}</span><br>
+            <span class="student-email">Email: {{ student.email }}</span><br>
+            <span class="student-telephone">Date: {{ student.telephone }}</span><br>
+            <span class="student-note">Prescription: {{ student.note }}</span><br>
+          </div>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+</div>
+<div id="update-list"></div>
+<div *ngIf="visitToUpdate" class="Updater">
+  <h3> Update Visit</h3>
+  <form (ngSubmit)="updateVisit()">
+    <label for="updatePatientName">Patient Name:</label><br>
+    <input type="text" id="updatePatientName" [(ngModel)]="visitToUpdate.patientName" name="updatePatientName"><br>
+
+    <label for="updatePatientSurname">Patient Surname:</label><br>
+    <input type="text" id="updatePatientSurname" [(ngModel)]="visitToUpdate.patientSurname" name="updatePatientSurname"><br>
+
+    <label for="updateEmail">Email:</label><br>
+    <input type="email" id="updateEmail" [(ngModel)]="visitToUpdate.email" name="updateEmail"><br>
+
+    <label for="updateDate">Date:</label><br>
+    <input type="date" id="updateDate" [(ngModel)]="visitToUpdate.date" name="updateDate"><br>
+
+    <label for="updateNote">Prescription:</label><br>
+    <input type="text" id="updateNote" [(ngModel)]="visitToUpdate.note" name="updateNote"><br>
+
+    <button type="submit">Update Visit</button>
+  </form>
+</div>
+
+<div class="hidden">
+  <input #studentFirstName />
+  <input #studentLastName />
+  <input #studentEmail />
+  <input #studentTelephone />
+  <input #studentNote />
+</div>
+<div class="sort-search-container">
+  <h3 id="prescription-list" class = "YourVisits">Your prescriptions:</h3>
+  <button (click)="toggleStudentSort('surname')">Sort by Surname</button>
+  <button (click)="toggleStudentSort('telephone')">Sort by Date</button>
+  <button (click)="toggleStudentSort('id')">Sort by ID</button>
+  <button (click)="toggleStudentSort('firstname')">Sort by Firstname</button>
+
+  <input type="text" placeholder="Search Prescriptions..." [(ngModel)]="studentSearchTerm" (input)="filterStudents()" />
+</div>
+<div class="student-container">
+  <h3>Prescription List</h3>
+  <table class="student-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Date</th>
+      <th>Prescription</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of filteredStudents">
+      <td>{{student.id}}</td>
+      <td>{{student.firstname}}</td>
+      <td>{{student.lastname}}</td>
+      <td>{{student.email}}</td>
+      <td>{{student.telephone}}</td>
+      <td>{{student.note}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

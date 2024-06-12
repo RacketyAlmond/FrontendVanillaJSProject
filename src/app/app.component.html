@@ -1,0 +1,30 @@
+<div class="page-header">
+  <div class="container">
+    <h1 class = "headerOne">Healthcare app</h1><br>
+    <div class="navLinks">
+      <a [routerLink]="['/home']">Home</a>
+      <br/>
+      <a [routerLink]="['auth/login']">Login</a>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav" routerLinkActive="active">
+      <li *ngIf="authority === 'user'" class="nav-item">
+        <a class="nav-link" routerLink="user">User Page</a>
+      </li>
+      <li *ngIf="authority === 'admin'" class="nav-item">
+        <a class="nav-link" routerLink="admin">Admin Page</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<div id="content">
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
